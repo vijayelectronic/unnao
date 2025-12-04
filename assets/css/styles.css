@@ -1,0 +1,99 @@
+/* Vijay Electronics Unnao - Styles */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --secondary: #10b981;
+  --outline: #374151;
+  --card: #f8fafc;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0f14;
+  --text: #f2f5f7;
+  --muted: #94a3b8;
+  --card: #0f172a;
+  --outline: #9aa4b2;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+.site-header { border-bottom: 1px solid rgba(0,0,0,0.06); background: var(--bg); position: sticky; top: 0; z-index: 50; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand .logo { font-weight: 700; }
+.brand .city { margin-left: 6px; color: var(--muted); }
+.nav a { margin: 0 8px; text-decoration: none; color: var(--text); padding: 6px 8px; border-radius: 6px; }
+.nav a.active { background: var(--card); }
+.header-actions .btn.small { padding: 6px 10px; font-size: 14px; }
+.topbar { background: var(--card); font-size: 14px; }
+.topbar-inner { display: flex; gap: 12px; padding: 8px 0; color: var(--muted); }
+
+.btn { display: inline-block; padding: 10px 16px; border-radius: 8px; border: 1px solid transparent; cursor: pointer; text-decoration: none; color: #fff; }
+.btn.primary { background: var(--primary); }
+.btn.secondary { background: var(--secondary); }
+.btn.outline { background: transparent; border-color: var(--outline); color: var(--text); }
+.btn.small { font-size: 13px; }
+
+.hero { position: relative; }
+.slider { position: relative; height: 60vh; min-height: 380px; overflow: hidden; }
+.slide { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1.03); opacity: 0; transition: opacity .7s ease; }
+.slide.active { opacity: 1; }
+.slide-content { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; background: rgba(0,0,0,.45); color: #fff; padding: 18px 20px; border-radius: 12px; max-width: 720px; }
+.slide-content h1 { margin: 0 0 8px; }
+.slide-content p { margin: 0 0 12px; }
+
+.icons { padding: 40px 0; }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+.icon-card { background: var(--card); border-radius: 12px; padding: 16px; text-align: center; }
+.icon-svg { width: 64px; height: 64px; fill: var(--text); margin-bottom: 8px; }
+.icon-img { width: 64px; height: 64px; object-fit: contain; margin-bottom: 8px; }
+
+.cta { padding: 40px 0; }
+.cta-card { background: var(--card); border-radius: 12px; padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+
+.map { padding: 20px 0 40px; }
+.map-embed iframe { width: 100%; height: 340px; border: 0; border-radius: 12px; }
+
+.site-footer { border-top: 1px solid rgba(0,0,0,0.06); padding: 20px 0; background: var(--bg); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; }
+.footer-links a { margin-right: 8px; color: var(--text); text-decoration: none; }
+
+.page { padding: 26px 0 40px; }
+.products-grid, .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.card img { width: 100%; height: 160px; object-fit: cover; }
+.card-body { padding: 12px 14px; }
+
+.cta-center { text-align: center; margin-top: 12px; }
+
+.contact-wrapper { display: grid; grid-template-columns: 1.3fr .9fr; gap: 18px; }
+.form-card { background: var(--card); border-radius: 12px; padding: 16px; }
+.form-row { display: flex; flex-direction: column; margin-bottom: 12px; }
+.form-row input, .form-row textarea { padding: 10px; border-radius: 8px; border: 1px solid #d1d5db; background: #fff; color: #111827; }
+html[data-theme="dark"] .form-row input, html[data-theme="dark"] .form-row textarea { background: #0b0f14; border-color: #334155; color: var(--text); }
+.form-actions { display: flex; gap: 10px; align-items: center; }
+.muted { color: var(--muted); }
+
+.contact-aside .card { padding: 12px; }
+.contact-aside iframe { width: 100%; height: 220px; border: 0; border-radius: 8px; }
+
+/* Language visibility */
+.lang { display: none; }
+html[data-lang="en"] .lang.lang-en { display: block; }
+html[data-lang="hi"] .lang.lang-hi { display: block; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider { height: 48vh; }
+  .header-inner { flex-wrap: wrap; gap: 8px; }
+  .contact-wrapper { grid-template-columns: 1fr; }
+}

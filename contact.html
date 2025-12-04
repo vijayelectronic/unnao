@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Vijay Electronics Unnao</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">Vijay Electronics</span>
+        <span class="city">Unnao</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="langToggle" class="btn small">EN/हिं</button>
+        <button id="themeToggle" class="btn small">🌙/☀️</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 class="lang lang-en">Contact Us</h1>
+    <h1 class="lang lang-hi">संपर्क करें</h1>
+
+    <div class="contact-wrapper">
+      <form id="contactForm" class="form-card">
+        <div class="form-row">
+          <label class="lang lang-en" for="name">Name</label>
+          <label class="lang lang-hi" for="name">नाम</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label class="lang lang-en" for="phone">Phone</label>
+          <label class="lang lang-hi" for="phone">फोन</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-row">
+          <label class="lang lang-en" for="email">Email</label>
+          <label class="lang lang-hi" for="email">ईमेल</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-row">
+          <label class="lang lang-en" for="message">Message</label>
+          <label class="lang lang-hi" for="message">मैसेज</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <a class="btn outline" href="https://wa.me/918090090051" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <small class="muted">
+          This form is connected to Formspree. Set your form ID in <code>assets/js/main.js</code> to receive emails at <strong>vijayelectronic689@gmail.com</strong>.
+        </small>
+      </form>
+
+      <aside class="contact-aside">
+        <div class="card">
+          <h3>Store Details</h3>
+          <p>Vijay Electronics, Unnao</p>
+          <p>📞 +91 8090090051</p>
+          <p>✉️ vijayelectronic689@gmail.com</p>
+          <p><a href="https://wa.me/918090090051" target="_blank" rel="noopener">WhatsApp us</a></p>
+        </div>
+        <div class="card">
+          <h3>Location</h3>
+          <iframe title="Vijay Electronics Unnao" src="https://www.google.com/maps?q=Vijay+Electronics+Unnao&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Vijay Electronics Unnao</strong> — +91 8090090051 — vijayelectronic689@gmail.com
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
